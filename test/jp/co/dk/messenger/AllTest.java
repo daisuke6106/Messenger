@@ -11,5 +11,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	jp.co.dk.messenger.MessegeManagerTest.class, 
 	jp.co.dk.messenger.MessengerTest.class, 
 	
+	/* jp.co.dk.messenger.exception */
+	jp.co.dk.messenger.exception.MessengerExceptionTest.class, 
+	jp.co.dk.messenger.exception.MessengerFatalExceptionTest.class, 
 })
 public class AllTest {}
