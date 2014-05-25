@@ -10,8 +10,11 @@ import jp.co.dk.message.AbstractMessage;
  */
 public class MessengerMessege extends AbstractMessage{
 	
-	/** 必須項目は */
-	public static final MessengerMessege ERROR_MAIL_ = new MessengerMessege("E001");
+	/** SMTPサーバ名が設定されていません。 */
+	public static final MessengerMessege ERROR_SERVERNAME_IS_NOT_SET = new MessengerMessege("E001");
+	
+	/** SMTPホスト名が設定されていません。 */
+	public static final MessengerMessege ERROR_HOSTNAME_IS_NOT_SET = new MessengerMessege("E002");
 	
 	protected MessengerMessege(String messageId) {
 		super(messageId);

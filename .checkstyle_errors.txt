@@ -1,31 +1,31 @@
 Starting audit...
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Message.java:0: Missing package-info.java file.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Message.java:4: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Message.java:5: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Message.java:10: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Message.java:10:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Message.java:12:9: 冗長な 'public' 修飾子です。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Message.java:13: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:6: Javadoc コメントがありません。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:7: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:7:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:8:9: Javadoc コメントがありません。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:8:35: 変数 'messangerList' は private とし、アクセッサメソッドを持つべきです。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:9: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:10:9: Javadoc コメントがありません。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/MessageManager.java:11: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Messanger.java:3: Javadoc コメントがありません。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Messanger.java:4: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Messanger.java:4:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Messanger.java:5:9: Javadoc コメントがありません。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Messanger.java:5:9: 冗長な 'public' 修飾子です。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/Messanger.java:6: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:0: Missing package-info.java file.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:3:8: 使用されないインポートです - javax.mail.Session。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:8: Javadoc コメントがありません。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:8:39: '{' の前にホワイトスペースがありません。
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:9: Line has trailing spaces.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:9:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:11:26: Parameter message should be final.
-/home/dk/projects/Messanger/src/jp/co/dk/messanger/mail/Mail.java:12: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:0: Missing package-info.java file.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:4: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:5: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:10: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:10:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:12:9: 冗長な 'public' 修飾子です。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:13: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:6: Javadoc コメントがありません。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:7: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:7:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:8:9: Javadoc コメントがありません。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:8:35: 変数 'messangerList' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:9: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:10:9: Javadoc コメントがありません。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:11: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:3: Javadoc コメントがありません。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:4: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:4:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:5:9: Javadoc コメントがありません。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:5:9: 冗長な 'public' 修飾子です。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:6: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:0: Missing package-info.java file.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:3:8: 使用されないインポートです - javax.mail.Session。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:8: Javadoc コメントがありません。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:8:39: '{' の前にホワイトスペースがありません。
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:9: Line has trailing spaces.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:9:1: File contains tab characters (this is the first instance).
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:11:26: Parameter message should be final.
+/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:12: Line has trailing spaces.
 Audit done.

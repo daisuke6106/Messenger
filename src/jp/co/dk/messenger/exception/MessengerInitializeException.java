@@ -6,17 +6,17 @@ import jp.co.dk.message.MessageInterface;
 import jp.co.dk.message.exception.AbstractMessageFatalException;
 
 /**
- * MessengerFatalExceptionは、メッセンジャーへの操作にて例外が発生したことを通知する例外クラスです。
+ * DocumentExceptionは、メッセンジャーへの操作にて例外が発生したことを通知する例外クラスです。
  * 
  * @version 1.0
  * @author D.Kanno
  */
-public class MessengerFatalException extends AbstractMessageFatalException{
+public class MessengerInitializeException extends MessengerFatalException{
 	
 	/**
 	 * シリアルバージョンID
 	 */
-	private static final long serialVersionUID = 7695708872035193621L;
+	private static final long serialVersionUID = -3294334890147096034L;
 
 	/**
 	 * コンストラクタ<p>
@@ -26,7 +26,7 @@ public class MessengerFatalException extends AbstractMessageFatalException{
 	 * @param msg メッセージ定数インスタンス
 	 * @since 1.0
 	 */
-	public MessengerFatalException(MessageInterface msg){
+	public MessengerInitializeException(MessageInterface msg){
 		super(msg);
 	}
 	
@@ -39,7 +39,7 @@ public class MessengerFatalException extends AbstractMessageFatalException{
 	 * @param str メッセージ埋め込み文字列
 	 * @since 1.0
 	 */
-	public MessengerFatalException(MessageInterface msg, String str){
+	public MessengerInitializeException(MessageInterface msg, String str){
 		super(msg, str);
 	}
 	
@@ -52,7 +52,7 @@ public class MessengerFatalException extends AbstractMessageFatalException{
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public MessengerFatalException(MessageInterface msg, Throwable throwable){
+	public MessengerInitializeException(MessageInterface msg, Throwable throwable){
 		super(msg, throwable);
 	}
 	
@@ -66,7 +66,7 @@ public class MessengerFatalException extends AbstractMessageFatalException{
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public MessengerFatalException(MessageInterface msg, String str, Throwable throwable){
+	public MessengerInitializeException(MessageInterface msg, String str, Throwable throwable){
 		super(msg, str, throwable);
 	}
 	
@@ -80,7 +80,7 @@ public class MessengerFatalException extends AbstractMessageFatalException{
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public MessengerFatalException(MessageInterface msg, List<String> list, Throwable throwable){
+	public MessengerInitializeException(MessageInterface msg, List<String> list, Throwable throwable){
 		super(msg, list, throwable);
 	}
 	
@@ -94,7 +94,7 @@ public class MessengerFatalException extends AbstractMessageFatalException{
 	 * @param throwable 例外インスタンス
 	 * @since 1.0
 	 */
-	public MessengerFatalException(MessageInterface msg, String[] str, Throwable throwable){
+	public MessengerInitializeException(MessageInterface msg, String[] str, Throwable throwable){
 		super(msg, str, throwable);
 	}
 }
