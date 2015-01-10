@@ -3,7 +3,6 @@ package jp.co.dk.messenger.exception;
 import java.util.List;
 
 import jp.co.dk.message.MessageInterface;
-import jp.co.dk.message.exception.AbstractMessageFatalException;
 
 /**
  * DocumentExceptionは、メッセンジャーへの操作にて例外が発生したことを通知する例外クラスです。
