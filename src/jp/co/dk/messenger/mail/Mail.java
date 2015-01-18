@@ -1,7 +1,5 @@
 package jp.co.dk.messenger.mail;
 
-import javax.mail.Session;
-
 import jp.co.dk.messenger.Messege;
 import jp.co.dk.messenger.Messenger;
 import jp.co.dk.messenger.exception.MessengerInitializeException;
