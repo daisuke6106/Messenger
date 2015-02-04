@@ -8,7 +8,9 @@ package jp.co.dk.messenger;
  */
 public interface Messege {
 	
-	@Override
-	public String toString();
+	
+	public String getTitle();
+	
+	public String getText();
 	
 }
