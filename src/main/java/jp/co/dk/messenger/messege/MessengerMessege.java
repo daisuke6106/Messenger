@@ -16,18 +16,26 @@ public class MessengerMessege extends AbstractMessage{
 	/** SMTP接続先ポート番号が設定されていません。 */
 	public static final MessengerMessege ERROR_SMTP_PORT_IS_NOT_SET = new MessengerMessege("E002");
 	
-	/** SMTP接続先ホストに対しての認証。 */
-	public static final MessengerMessege ERROR_SMTP_PORT_IS_NOT_SET = new MessengerMessege("E002");
+	/** SMTP接続先認証有無が設定されていません。 */
+	public static final MessengerMessege ERROR_SMTP_AUTH_IS_NOT_SET = new MessengerMessege("E002");
 	
-	/** SMTP接続先ポート番号が設定されていません。 */
-	public static final MessengerMessege ERROR_SMTP_PORT_IS_NOT_SET = new MessengerMessege("E002");
+	/** SMTP接続時のSTARTTLSが設定されていません。 */
+	public static final MessengerMessege ERROR_SMTP_STARTTLS_IS_NOT_SET = new MessengerMessege("E002");
+	
+	/** SMTP接続時のデバック有無が設定されていません。 */
+	public static final MessengerMessege ERROR_SMTP_DEBUG_IS_NOT_SET = new MessengerMessege("E002");
 	
 	/** SMTP認証ユーザが指定されていません。 */
 	public static final MessengerMessege ERROR_SMTP_USER_IS_NOT_SET = new MessengerMessege("E003");
 	
 	/** SMTP認証パスワードが指定されていません。 */
 	public static final MessengerMessege ERROR_SMTP_PASSWORD_IS_NOT_SET = new MessengerMessege("E003");
+
+	/** メール送信先アドレスの指定が不正です。 */
+	public static final MessengerMessege ERROR_SEND_MAILADDRESS_IS_FAILE = new MessengerMessege("E003");
 	
+	/** メール送信時のエンコーディングの指定が不正です。encode=[{0}] */
+	public static final MessengerMessege ERROR_SEND_MAIL_ENCODING_IS_FAILE = new MessengerMessege("E003");
 	
 	
 	
