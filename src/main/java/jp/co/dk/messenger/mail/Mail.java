@@ -24,11 +24,26 @@ import jp.co.dk.messenger.property.MessengerProperty;
 
 public class Mail implements Messenger{
 	
-	/** SMTPサーバ名 */
-	protected String smtpServerName;
+	/** SMTP接続先ホスト名 */
+	protected String hostname;
 	
-	/** SMTPホスト名 */
-	protected String smtpHostName;
+	/** SMTP接続先ポート番号 */
+	protected int port;
+	
+	/** SMTP接続先認証有無 */
+	protected boolean auth;
+	
+	/** SMTP接続時のSTARTTLS */
+	protected boolean starttls_enable;
+	
+	/** SMTP接続時のデバック有無 */
+	protected boolean debug;
+	
+	/** SMTP接続時のユーザ */
+	protected String user;
+	
+	/** SMTP接続時のパスワード */
+	protected String password;
 	
 	/** メール送信セッション */
 	protected Session session;
@@ -42,36 +57,35 @@ public class Mail implements Messenger{
 	/** 送信時のエンコード */
 	protected Encode encode;
 	
-	
 	public Mail() throws MessengerInitializeException {
-		
-		String hostname        = MessengerProperty.MAIL_SMTP_HOST.getString();
-		String port            = MessengerProperty.MAIL_SMTP_PORT.getString();
-		String auth            = MessengerProperty.MAIL_SMTP_AUTH.getString();
-		String starttls_enable = MessengerProperty.MAIL_SMTP_STARTTLS_ENABLE.getString();
-		String debug           = MessengerProperty.MAIL_SMTP_DEBUG.getString();
-		if (hostname        == null || hostname.length()        == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_HOSTNAME_IS_NOT_SET);
-		if (port            == null || port.length()            == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_PORT_IS_NOT_SET);
-		if (auth            == null || auth.length()            == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_AUTH_IS_NOT_SET);
-		if (starttls_enable == null || starttls_enable.length() == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_STARTTLS_IS_NOT_SET);
-		if (debug           == null || debug.length()           == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_DEBUG_IS_NOT_SET);
-		
+		this.hostname        = MessengerProperty.MAIL_SMTP_HOST.getString();
+		if (hostname        == null || hostname.length() == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_HOSTNAME_IS_NOT_SET);
+		this.port            = MessengerProperty.MAIL_SMTP_PORT.getInt();
+		this.auth            = MessengerProperty.MAIL_SMTP_AUTH.getBoolean();
+		this.starttls_enable = MessengerProperty.MAIL_SMTP_STARTTLS_ENABLE.getBoolean();
+		this.debug           = MessengerProperty.MAIL_SMTP_DEBUG.getBoolean();
 		Properties property = new Properties();
 		property.put("mail.smtp.host"           , MessengerProperty.MAIL_SMTP_HOST.getString());
 		property.put("mail.smtp.port"           , MessengerProperty.MAIL_SMTP_PORT.getString());
 		property.put("mail.smtp.auth"           , MessengerProperty.MAIL_SMTP_AUTH.getString());
 		property.put("mail.smtp.starttls.enable", MessengerProperty.MAIL_SMTP_STARTTLS_ENABLE.getString());
 		property.put("mail.smtp.debug"          , MessengerProperty.MAIL_SMTP_DEBUG.getString());
-		final String user     = MessengerProperty.MAIL_SMTP_AUTHENTICATION_USER.getString();
-		final String password = MessengerProperty.MAIL_SMTP_AUTHENTICATION_PASSWORD.getString();
-		if (user     != null && user.equals("")) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_USER_IS_NOT_SET);
-		if (password != null && password.equals("")) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_PASSWORD_IS_NOT_SET);
-		this.session = Session.getInstance(property, new javax.mail.Authenticator(){
-			protected PasswordAuthentication getPasswordAuthentication(){
-            	return new PasswordAuthentication(user, password);
-			}
-		});
 		
+		if (auth) {
+			this.user     = MessengerProperty.MAIL_SMTP_AUTHENTICATION_USER.getString();
+			if (user != null && user.equals("")) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_USER_IS_NOT_SET);
+			
+			this.password = MessengerProperty.MAIL_SMTP_AUTHENTICATION_PASSWORD.getString();
+			if (password != null && password.equals("")) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_PASSWORD_IS_NOT_SET);
+			
+			this.session = Session.getInstance(property, new javax.mail.Authenticator(){
+				protected PasswordAuthentication getPasswordAuthentication(){
+	            	return new PasswordAuthentication(user, password);
+				}
+			});
+		} else {
+			this.session = Session.getInstance(property);
+		}
 		this.toAddressList = new HashMap<Message.RecipientType, List<Address>>();
 		this.toAddressList.put(Message.RecipientType.TO , this.createAddressList(MessengerProperty.MAIL_SMTP_TO_MAIL_ADDRESS.getList()));
 		this.toAddressList.put(Message.RecipientType.CC , this.createAddressList(MessengerProperty.MAIL_SMTP_CC_MAIL_ADDRESS.getList()));

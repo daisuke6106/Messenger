@@ -37,9 +37,6 @@ public class MessengerMessege extends AbstractMessage{
 	/** メール送信時のエンコーディングの指定が不正です。encode=[{0}] */
 	public static final MessengerMessege ERROR_SEND_MAIL_ENCODING_IS_FAILE = new MessengerMessege("E009");
 	
-	/** SMTPサーバ名が設定されていません。 */
-	public static final MessengerMessege ERROR_SERVERNAME_IS_NOT_SET = new MessengerMessege("E010");
-	
 	/** メッセージの送信に失敗しました。 */
 	public static final MessengerMessege ERROR_SEND_MAIL = new MessengerMessege("E011");
 	
