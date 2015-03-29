@@ -22,6 +22,13 @@ import jp.co.dk.messenger.exception.MessengerSendException;
 import jp.co.dk.messenger.messege.MessengerMessege;
 import jp.co.dk.messenger.property.MessengerProperty;
 
+/**
+ * <p>メールの送信を行うメッセンジャークラスです。</p>
+ * MessengerProperty.propertiesに定義されている内容を元に本クラスのインスタンスを生成し、メール送信を行います。
+ * 
+ * @version 1.0
+ * @author D.Kanno
+ */
 public class Mail implements Messenger{
 	
 	/** SMTP接続先ホスト名 */
@@ -57,6 +64,9 @@ public class Mail implements Messenger{
 	/** 送信時のエンコード */
 	protected Encode encode;
 	
+	/**
+	 * <p>MessengerProperty.propertiesに定義されている内容を元にインスタンスを生成します。</p>
+	 */
 	public Mail() throws MessengerInitializeException {
 		this.hostname        = MessengerProperty.MAIL_SMTP_HOST.getString();
 		if (hostname        == null || hostname.length() == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_HOSTNAME_IS_NOT_SET);
