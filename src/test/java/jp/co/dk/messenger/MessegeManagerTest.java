@@ -100,6 +100,6 @@ class DummyMessenger02 implements Messenger{
 	DummyMessenger02(String arg) {}
 	
 	@Override
-	public void send(Messege message) throws MessengerSendException {}
+	public void send(Message message) throws MessengerSendException {}
 	
 }

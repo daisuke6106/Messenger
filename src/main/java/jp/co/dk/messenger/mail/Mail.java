@@ -105,7 +105,7 @@ public class Mail implements Messenger{
 	}
 	
 	@Override
-	public void send(jp.co.dk.messenger.Messege message) throws MessengerSendException{
+	public void send(jp.co.dk.messenger.Message message) throws MessengerSendException{
 		try {
 			MimeMessage messageObject = new MimeMessage(this.session);
 			List<Address> toAddressList  = this.toAddressList.get(Message.RecipientType.TO);

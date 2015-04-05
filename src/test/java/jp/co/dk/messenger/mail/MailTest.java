@@ -11,7 +11,6 @@ import javax.mail.Message;
 import javax.mail.internet.InternetAddress;
 
 import jp.co.dk.message.MessageInterface;
-import jp.co.dk.messenger.Messege;
 import jp.co.dk.messenger.MessengerFoundationTest;
 import jp.co.dk.messenger.exception.MessengerInitializeException;
 import jp.co.dk.messenger.exception.MessengerSendException;
@@ -87,7 +86,7 @@ public class MailTest {
 		@Test
 		public void send() {
 			try {
-				sut.send(new Messege() {
+				sut.send(new jp.co.dk.messenger.Message() {
 					@Override
 					public String getTitle() {
 						return "テスト送信タイトル";

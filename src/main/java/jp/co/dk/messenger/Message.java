@@ -7,7 +7,7 @@ package jp.co.dk.messenger;
  * @version 1.0
  * @author D.Kanno
  */
-public interface Messege {
+public interface Message {
 	
 	/**
 	 * <p>メッセージのタイトルを返却します。</p> 

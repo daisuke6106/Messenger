@@ -19,6 +19,6 @@ public interface Messenger {
 	 * @param message　メッセージタイトル、本文を保持するメッセージ送信内諭インスタンス
 	 * @throws MessengerSendException メッセージの送信に失敗した場合
 	 */
-	public void send(Messege message) throws MessengerSendException;
+	public void send(Message message) throws MessengerSendException;
 	
 }

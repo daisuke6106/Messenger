@@ -55,7 +55,7 @@ public class MessegeManager implements Messenger {
 	
 	
 	@Override
-	public void send(Messege message) throws MessengerSendException {
+	public void send(Message message) throws MessengerSendException {
 		for (Messenger messenger : messangerList) messenger.send(message);
 	}
 }
