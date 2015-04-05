@@ -13,6 +13,10 @@ import jp.co.dk.property.exception.PropertyException;
  */
 public class MessengerProperty extends AbstractProperty {
 	
+	// [メッセンジャー全般]=============================================================================================
+	public static final MessengerProperty MESSENGER_CLASS                   = new MessengerProperty("messenger.class");
+	
+	// [メール関連]====================================================================================================
 	/** SMTP接続先ホスト名 */
 	public static final MessengerProperty MAIL_SMTP_HOST                    = new MessengerProperty("mail.smtp.host");
 	
