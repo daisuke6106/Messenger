@@ -11,7 +11,7 @@ public class DummyMessege extends AbstractMessage {
 	public static DummyMessege M0003 = new DummyMessege("M0003");
 
 	protected DummyMessege(String messageId) {
-		super(messageId);
+		super("DummyMessage.properties", messageId);
 	}
 
 }

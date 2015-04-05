@@ -47,7 +47,7 @@ public class MailTest {
 				
 				assertThat(sut.toAddressList, notNullValue());
 				
-				Address fromAddress = new InternetAddress("from_daisuke6106@gmail.com","送信先アドレス(TO)");
+				Address fromAddress = new InternetAddress("from_daisuke6106@gmail.com","送信元アドレス");
 				assertThat(sut.fromAddress, is(fromAddress));
 				
 				List<Address> toAddressList = new ArrayList<Address>();
