@@ -25,6 +25,8 @@ import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 
+import static org.assertj.core.api.Assertions.*;
+
 @RunWith(Enclosed.class)
 public class MailTest {
 
@@ -48,7 +50,7 @@ public class MailTest {
 				assertThat(sut.toAddressList, notNullValue());
 				
 				Address fromAddress = new InternetAddress("from_daisuke6106@gmail.com","送信元アドレス");
-				assertThat(sut.fromAddress, is(fromAddress));
+				org.assertj.core.api.Assertions.assertThat(sut.fromAddress).isEqualTo(fromAddress);
 				
 				List<Address> toAddressList = new ArrayList<Address>();
 				Address toAddress1 = new InternetAddress("to_daisuke6106@gmail.com","送信先アドレス(TO)");
@@ -74,31 +76,19 @@ public class MailTest {
 		}
 	}
 	
-	public static class 正常にインスタンスが生成できた場合 extends MessengerFoundationTest {
-		
-		protected Mail sut;
-		
-		@Before
-		public void init() {
-			this.sut = new Mail();
-		}
-		
-		@Test
-		public void send() {
-			try {
-				sut.send(new jp.co.dk.messenger.Message() {
-					@Override
-					public String getTitle() {
-						return "テスト送信タイトル";
-					}
-					@Override
-					public String getText() {
-						return "テスト送信メール本文";
-					}
-				});
-			} catch (MessengerSendException e) {
-				fail(e);
-			}
-		}
-	}
+//	public static class 正常にインスタンスが生成できた場合 extends MessengerFoundationTest {
+//		
+//		protected Mail sut;
+//		
+//		@Before
+//		public void init() {
+//			this.sut = new Mail() {
+//				protected List<jp.co.dk.messenger.Message> messageList = new ArrayList<jp.co.dk.messenger.Message>();
+//				@Override
+//				public void send(jp.co.dk.messenger.Message message) throws MessengerSendException {
+//					this.messageList.add(message);
+//				}
+//			};
+//		}
+//	}
 }
