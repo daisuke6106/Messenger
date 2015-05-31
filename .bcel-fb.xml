@@ -1,44 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="2.0.2" sequence="0" timestamp="1399137300509" analysisTimestamp="1399137300564" release="">
+<BugCollection version="3.0.1" sequence="0" timestamp="1433086801609" analysisTimestamp="1433086801616" release="">
   <Project projectName="">
-    <Jar>/home/dk/projects/Messenger/messenger.jar</Jar>
-    <AuxClasspathEntry>/home/dk/projects/Messenger/lib/mail.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/home/dk/projects/Messenger/lib/message_all.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/home/dk/projects/Messenger/lib/property_all.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/home/dk/projects/Messenger/lib/test/jmockit-coverage.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/home/dk/projects/Messenger/lib/test/jmockit.jar</AuxClasspathEntry>
-    <AuxClasspathEntry>/home/dk/projects/Messenger/lib/test/testtemplate_all.jar</AuxClasspathEntry>
-    <SrcDir>/home/dk/projects/Messenger/src</SrcDir>
+    <Jar>/home/dk/github_workspace/Messenger/messenger_1.0.0.jar</Jar>
+    <AuxClasspathEntry>/home/dk/github_workspace/Messenger/lib/mail.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/dk/github_workspace/Messenger/lib/message_all.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/dk/github_workspace/Messenger/lib/property_all.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/dk/github_workspace/Messenger/lib/test/assertj-core-1.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/dk/github_workspace/Messenger/lib/test/jmockit-coverage.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/dk/github_workspace/Messenger/lib/test/jmockit.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/dk/github_workspace/Messenger/lib/test/testtemplate_all.jar</AuxClasspathEntry>
+    <SrcDir>/home/dk/github_workspace/Messenger/src/main/java</SrcDir>
   </Project>
-  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" abbrev="UrF" category="STYLE">
-    <Class classname="jp.co.dk.messenger.MessegeManager">
-      <SourceLine classname="jp.co.dk.messenger.MessegeManager" start="8" end="12" sourcefile="MessegeManager.java" sourcepath="jp/co/dk/messenger/MessegeManager.java"/>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE">
+    <Class classname="jp.co.dk.messenger.mail.Mail">
+      <SourceLine classname="jp.co.dk.messenger.mail.Mail" start="70" end="139" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
     </Class>
-    <Field classname="jp.co.dk.messenger.MessegeManager" name="messangerList" signature="Ljava/util/List;" isStatic="false">
-      <SourceLine classname="jp.co.dk.messenger.MessegeManager" sourcefile="MessegeManager.java" sourcepath="jp/co/dk/messenger/MessegeManager.java"/>
+    <Field classname="jp.co.dk.messenger.mail.Mail" name="debug" signature="Z" isStatic="false">
+      <SourceLine classname="jp.co.dk.messenger.mail.Mail" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
     </Field>
-    <SourceLine classname="jp.co.dk.messenger.MessegeManager" start="8" end="8" startBytecode="12" endBytecode="12" sourcefile="MessegeManager.java" sourcepath="jp/co/dk/messenger/MessegeManager.java"/>
+    <SourceLine classname="jp.co.dk.messenger.mail.Mail" start="76" end="76" startBytecode="79" endBytecode="79" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE">
+    <Class classname="jp.co.dk.messenger.mail.Mail">
+      <SourceLine classname="jp.co.dk.messenger.mail.Mail" start="70" end="139" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
+    </Class>
+    <Field classname="jp.co.dk.messenger.mail.Mail" name="port" signature="I" isStatic="false">
+      <SourceLine classname="jp.co.dk.messenger.mail.Mail" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
+    </Field>
+    <SourceLine classname="jp.co.dk.messenger.mail.Mail" start="73" end="73" startBytecode="49" endBytecode="49" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="18" abbrev="UrF" category="STYLE">
+    <Class classname="jp.co.dk.messenger.mail.Mail">
+      <SourceLine classname="jp.co.dk.messenger.mail.Mail" start="70" end="139" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
+    </Class>
+    <Field classname="jp.co.dk.messenger.mail.Mail" name="starttls_enable" signature="Z" isStatic="false">
+      <SourceLine classname="jp.co.dk.messenger.mail.Mail" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
+    </Field>
+    <SourceLine classname="jp.co.dk.messenger.mail.Mail" start="75" end="75" startBytecode="69" endBytecode="69" sourcefile="Mail.java" sourcepath="jp/co/dk/messenger/mail/Mail.java"/>
   </BugInstance>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Sun, 4 May 2014 02:15:00 +0900" total_classes="4" referenced_classes="14" total_bugs="1" total_size="15" num_packages="2" vm_version="22.0-b10" cpu_seconds="6.18" clock_seconds="4.86" peak_mbytes="81.92" alloc_mbytes="780.50" gc_seconds="0.05" priority_2="1">
-    <PackageStats package="jp.co.dk.messenger" total_bugs="1" total_types="3" total_size="10" priority_2="1">
-      <ClassStats class="jp.co.dk.messenger.Messege" sourceFile="Messege.java" interface="true" size="2" bugs="0"/>
-      <ClassStats class="jp.co.dk.messenger.MessegeManager" sourceFile="MessegeManager.java" interface="false" size="6" bugs="1" priority_2="1"/>
+  <FindBugsSummary timestamp="Mon, 1 Jun 2015 00:40:01 +0900" total_classes="12" referenced_classes="90" total_bugs="3" total_size="265" num_packages="5" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="4.98" clock_seconds="1.83" peak_mbytes="177.39" alloc_mbytes="1749.50" gc_seconds="0.05" priority_2="3">
+    <PackageStats package="jp.co.dk.messenger" total_bugs="0" total_types="3" total_size="31">
+      <ClassStats class="jp.co.dk.messenger.Message" sourceFile="Message.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="jp.co.dk.messenger.MessegeManager" sourceFile="MessegeManager.java" interface="false" size="26" bugs="0"/>
       <ClassStats class="jp.co.dk.messenger.Messenger" sourceFile="Messenger.java" interface="true" size="2" bugs="0"/>
     </PackageStats>
-    <PackageStats package="jp.co.dk.messenger.mail" total_bugs="0" total_types="1" total_size="5">
-      <ClassStats class="jp.co.dk.messenger.mail.Mail" sourceFile="Mail.java" interface="false" size="5" bugs="0"/>
+    <PackageStats package="jp.co.dk.messenger.exception" total_bugs="0" total_types="4" total_size="80">
+      <ClassStats class="jp.co.dk.messenger.exception.MessengerException" sourceFile="MessengerException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="jp.co.dk.messenger.exception.MessengerFatalException" sourceFile="MessengerFatalException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="jp.co.dk.messenger.exception.MessengerInitializeException" sourceFile="MessengerInitializeException.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="jp.co.dk.messenger.exception.MessengerSendException" sourceFile="MessengerSendException.java" interface="false" size="20" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jp.co.dk.messenger.mail" total_bugs="3" total_types="3" total_size="96" priority_2="3">
+      <ClassStats class="jp.co.dk.messenger.mail.Encode" sourceFile="Encode.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="jp.co.dk.messenger.mail.Mail" sourceFile="Mail.java" interface="false" size="67" bugs="3" priority_2="3"/>
+      <ClassStats class="jp.co.dk.messenger.mail.Mail$1" sourceFile="Mail.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jp.co.dk.messenger.messege" total_bugs="0" total_types="1" total_size="27">
+      <ClassStats class="jp.co.dk.messenger.messege.MessengerMessege" sourceFile="MessengerMessege.java" interface="false" size="27" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="jp.co.dk.messenger.property" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="jp.co.dk.messenger.property.MessengerProperty" sourceFile="MessengerProperty.java" interface="false" size="31" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1070" invocations="294" avgMicrosecondsPerInvocation="3642" maxMicrosecondsPerInvocation="78261" standardDeviationMircosecondsPerInvocation="9367"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="404" invocations="20" avgMicrosecondsPerInvocation="20205" maxMicrosecondsPerInvocation="378608" standardDeviationMircosecondsPerInvocation="82352"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="204" invocations="14" avgMicrosecondsPerInvocation="14587" maxMicrosecondsPerInvocation="47469" standardDeviationMircosecondsPerInvocation="18083"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="189" invocations="263" avgMicrosecondsPerInvocation="719" maxMicrosecondsPerInvocation="17674" standardDeviationMircosecondsPerInvocation="2381"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="140" invocations="14" avgMicrosecondsPerInvocation="10060" maxMicrosecondsPerInvocation="48515" standardDeviationMircosecondsPerInvocation="14882"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="127" invocations="295" avgMicrosecondsPerInvocation="432" maxMicrosecondsPerInvocation="18601" standardDeviationMircosecondsPerInvocation="1895"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="92" invocations="19" avgMicrosecondsPerInvocation="4862" maxMicrosecondsPerInvocation="67073" standardDeviationMircosecondsPerInvocation="14978"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="85" invocations="5" avgMicrosecondsPerInvocation="17150" maxMicrosecondsPerInvocation="85238" standardDeviationMircosecondsPerInvocation="34044"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="296" invocations="649" avgMicrosecondsPerInvocation="456" maxMicrosecondsPerInvocation="14496" standardDeviationMircosecondsPerInvocation="1327"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="88" invocations="90" avgMicrosecondsPerInvocation="979" maxMicrosecondsPerInvocation="11023" standardDeviationMircosecondsPerInvocation="2158"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="79" invocations="310" avgMicrosecondsPerInvocation="255" maxMicrosecondsPerInvocation="6079" standardDeviationMircosecondsPerInvocation="681"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="78" invocations="608" avgMicrosecondsPerInvocation="128" maxMicrosecondsPerInvocation="24605" standardDeviationMircosecondsPerInvocation="1037"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="72" invocations="90" avgMicrosecondsPerInvocation="809" maxMicrosecondsPerInvocation="10050" standardDeviationMircosecondsPerInvocation="1652"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="60" invocations="90" avgMicrosecondsPerInvocation="672" maxMicrosecondsPerInvocation="19205" standardDeviationMircosecondsPerInvocation="2590"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="52" invocations="43" avgMicrosecondsPerInvocation="1224" maxMicrosecondsPerInvocation="22852" standardDeviationMircosecondsPerInvocation="3534"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="44" invocations="133" avgMicrosecondsPerInvocation="335" maxMicrosecondsPerInvocation="13607" standardDeviationMircosecondsPerInvocation="1276"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="42" invocations="46" avgMicrosecondsPerInvocation="920" maxMicrosecondsPerInvocation="12981" standardDeviationMircosecondsPerInvocation="2411"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="40" invocations="652" avgMicrosecondsPerInvocation="61" maxMicrosecondsPerInvocation="10229" standardDeviationMircosecondsPerInvocation="438"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="36" invocations="46" avgMicrosecondsPerInvocation="802" maxMicrosecondsPerInvocation="7039" standardDeviationMircosecondsPerInvocation="1439"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="90" avgMicrosecondsPerInvocation="392" maxMicrosecondsPerInvocation="6552" standardDeviationMircosecondsPerInvocation="966"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="34" invocations="46" avgMicrosecondsPerInvocation="754" maxMicrosecondsPerInvocation="28514" standardDeviationMircosecondsPerInvocation="4142"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="33" invocations="43" avgMicrosecondsPerInvocation="788" maxMicrosecondsPerInvocation="4526" standardDeviationMircosecondsPerInvocation="1108"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="29" invocations="43" avgMicrosecondsPerInvocation="680" maxMicrosecondsPerInvocation="3699" standardDeviationMircosecondsPerInvocation="862"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="29" invocations="90" avgMicrosecondsPerInvocation="322" maxMicrosecondsPerInvocation="5574" standardDeviationMircosecondsPerInvocation="826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="28" invocations="43" avgMicrosecondsPerInvocation="654" maxMicrosecondsPerInvocation="8098" standardDeviationMircosecondsPerInvocation="1274"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="26" invocations="90" avgMicrosecondsPerInvocation="289" maxMicrosecondsPerInvocation="7707" standardDeviationMircosecondsPerInvocation="963"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>

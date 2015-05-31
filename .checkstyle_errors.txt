@@ -1,31 +1,497 @@
 Starting audit...
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:0: Missing package-info.java file.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:4: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:5: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:10: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:10:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:12:9: 冗長な 'public' 修飾子です。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messege.java:13: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:6: Javadoc コメントがありません。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:7: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:7:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:8:9: Javadoc コメントがありません。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:8:35: 変数 'messangerList' は private とし、アクセッサメソッドを持つべきです。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:9: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:10:9: Javadoc コメントがありません。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/MessegeManager.java:11: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:3: Javadoc コメントがありません。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:4: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:4:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:5:9: Javadoc コメントがありません。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:5:9: 冗長な 'public' 修飾子です。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/Messenger.java:6: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:0: Missing package-info.java file.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:3:8: 使用されないインポートです - javax.mail.Session。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:8: Javadoc コメントがありません。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:8:39: '{' の前にホワイトスペースがありません。
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:9: Line has trailing spaces.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:9:1: File contains tab characters (this is the first instance).
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:11:26: Parameter message should be final.
-/home/dk/projects/Messenger/src/jp/co/dk/messenger/mail/Mail.java:12: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:0: Missing package-info.java file.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:3: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:5: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:6: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:11: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:11:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:12: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:13: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:17:9: 冗長な 'public' 修飾子です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:18: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:19: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:20: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:24:9: 冗長な 'public' 修飾子です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Message.java:25: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:11: '.*' 形式のインポートの使用は避けるべきです - jp.co.dk.messenger.messege.MessengerMessege.*。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:13: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:16: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:21: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:21:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:22: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:23:35: 変数 'messangerList' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:24: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:25: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:26: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:29:40: MessengerInitializeException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:31: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:33: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:34: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:38: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:40: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:43: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:44: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:48:9: メソッド 'getMessengerClass' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:50: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:55: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:56: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:57:9: メソッド 'send' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:58:26: Parameter message should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:58:50: MessengerSendException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:59: 'for' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/MessegeManager.java:59: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:5: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:9: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:14: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:14:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:15: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:18: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:22:9: 冗長な 'public' 修飾子です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:22:34: 'message' には @param タグが必要です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:22:50: MessengerSendException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/Messenger.java:23: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:0: Missing package-info.java file.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:8: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:10: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:14:65: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:15: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:15:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:16: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:21: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:23: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:25: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:29:35: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:29:56: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:32: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:33: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:35: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:37: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:42:35: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:42:57: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:42:68: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:45: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:46: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:48: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:50: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:55:35: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:55:57: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:55:77: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:58: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:59: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:61: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:63: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:69: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:69:35: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:69:57: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:69:69: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:69:89: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:72: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:73: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:75: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:77: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:83: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:83:35: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:83:57: Parameter list should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:83:76: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:83:96: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:86: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:87: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:89: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:91: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:93:12: 'embeddedStrList' に対する使用されない @param タグです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:97: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:97:35: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:97:57: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:97:66: 'str' には @param タグが必要です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:97:71: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerException.java:97:91: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:8: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:10: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:14:75: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:15: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:15:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:16: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:21: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:23: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:25: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:29:40: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:29:61: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:32: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:33: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:35: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:37: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:42:40: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:42:62: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:42:73: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:45: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:46: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:48: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:50: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:55: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:55:40: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:55:62: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:55:82: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:58: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:59: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:61: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:63: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:69: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:69:40: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:69:62: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:69:74: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:69:94: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:72: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:73: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:75: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:77: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:83: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:83:40: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:83:62: Parameter list should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:83:81: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:83:101: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:86: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:87: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:89: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:91: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:93:12: 'embeddedStrList' に対する使用されない @param タグです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:97: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:97:40: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:97:62: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:97:71: 'str' には @param タグが必要です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:97:76: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerFatalException.java:97:96: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:6:8: 使用されないインポートです - jp.co.dk.message.exception.AbstractMessageFatalException。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:8: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:10: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:14:74: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:15: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:15:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:16: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:21: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:23: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:25: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:29:45: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:29:66: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:32: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:33: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:35: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:37: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:42:45: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:42:67: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:42:78: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:45: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:46: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:48: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:50: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:55: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:55:45: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:55:67: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:55:87: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:58: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:59: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:61: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:63: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:69: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:69:45: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:69:67: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:69:79: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:69:99: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:72: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:73: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:75: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:77: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:83: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:83:45: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:83:67: Parameter list should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:83:86: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:83:106: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:86: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:87: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:89: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:91: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:93:12: 'embeddedStrList' に対する使用されない @param タグです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:97: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:97:45: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:97:67: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:97:76: 'str' には @param タグが必要です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:97:81: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerInitializeException.java:97:101: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:7: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:9: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:13:63: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:14: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:14:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:15: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:20: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:22: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:24: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:28:39: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:28:60: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:31: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:32: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:34: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:36: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:41:39: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:41:61: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:41:72: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:44: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:45: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:47: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:49: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:54: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:54:39: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:54:61: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:54:81: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:57: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:58: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:60: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:62: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:68: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:68:39: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:68:61: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:68:73: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:68:93: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:71: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:72: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:74: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:76: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:82: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:82:39: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:82:61: Parameter list should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:82:80: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:82:100: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:85: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:86: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:88: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:90: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:92:12: 'embeddedStrList' に対する使用されない @param タグです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:96: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:96:39: Parameter msg should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:96:61: Parameter str should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:96:70: 'str' には @param タグが必要です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:96:75: Parameter throwable should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/exception/MessengerSendException.java:96:95: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:0: Missing package-info.java file.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:6: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:8: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:13: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:13:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:14: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:16: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:17: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:19: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:20: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:22: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:23:1: ';' の前にホワイトスペースがあります。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:24: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:25: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:27: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:28: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:31: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:34:24: Parameter encodeStr should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:34:31: 'encodeStr' がフィールドを隠しています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:37: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:38: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:40: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:46: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:47: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:50: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:55: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:55:33: Parameter encode should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:55:55: MessengerInitializeException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:55:83: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:57: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:57: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java:59: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:25: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:28: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:32:39: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:33: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:33:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:34: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:35:26: 変数 'hostname' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:36: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:37: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:38:23: 変数 'port' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:39: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:40: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:41:27: 変数 'auth' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:42: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:43: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:44:27: 名前 'starttls_enable' はパターン '^[a-z][a-zA-Z0-9]*$' に一致しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:44:27: 変数 'starttls_enable' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:45: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:46: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:47:27: 変数 'debug' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:48: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:49: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:50:26: 変数 'user' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:51: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:52: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:53:26: 変数 'password' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:54: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:55: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:56:27: 変数 'session' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:57: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:58: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:59:61: 変数 'toAddressList' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:60: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:61: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:62:27: 変数 'fromAddress' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:63: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:64: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:65:26: 変数 'encode' は private とし、アクセッサメソッドを持つべきです。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:66: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:67: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:70:30: 'MessengerInitializeException' には @throws タグが必要です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:70:30: MessengerInitializeException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:71: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:72: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:72: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:73: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:74: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:75: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:76: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:78: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:79: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:80: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:81: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:82: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:83: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:85: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:86: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:86: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:87: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:88: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:89: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:89: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:90: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:91: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:91:100: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:92: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:92:93: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:99: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:100: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:101: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:102: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:103: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:104: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:106: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:107:9: メソッド 'send' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:108: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:108:26: Parameter message should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:108:69: MessengerSendException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:108:91: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:110: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:111: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:111:39: 'toAddressList' がフィールドを隠しています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:112: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:112: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:113: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:114: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:114: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:115: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:116: 'if' 文では '{}' を使用しなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:116: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:118: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:119: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:122: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:125: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:126: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:126:9: Javadoc コメントがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:126:9: メソッド 'createAddressList' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:126:51: Parameter addressList should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:126:84: MessengerInitializeException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:133: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:134: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:134:9: Javadoc コメントがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:134:9: メソッド 'createAddress' は拡張するように設計されていません - abstract か final か空である必要があります。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:134:41: Parameter addressStr should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:134:67: MessengerInitializeException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:137: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java:139: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:0: Missing package-info.java file.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:5: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:7: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:11:54: '{' の前にホワイトスペースがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:12: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:12:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:13: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:14: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:15: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:16: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:17: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:18: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:19: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:20: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:22: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:23: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:24: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:25: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:26: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:27: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:28: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:29: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:30: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:31: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:32: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:33: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:34: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:35: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:36: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:37: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:38: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:40: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:41: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:42: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:43: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:44: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:45: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:46:9: Javadoc コメントがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/messege/MessengerMessege.java:46:36: Parameter messageId should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:0: Missing package-info.java file.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:8: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:10: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:15: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:15:1: File contains tab characters (this is the first instance).
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:16: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:17: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:17:9: Javadoc コメントがありません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:18: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:19: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:20: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:21: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:22: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:23: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:24: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:25: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:26: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:27: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:29: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:30: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:32: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:33: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:35: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:36: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:38: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:39: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:41: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:42: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:44: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:45: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:47: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:48: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:50: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:51: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:53: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:54: 行が 80 文字を超えています。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:55: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:56: 最初の一文はピリオドで終わらなければなりません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:58: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:60: Line has trailing spaces.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:63:37: '(' の前にホワイトスペースがあります。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:63:38: Parameter key should be final.
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:63:57: 'PropertyException' には @throws タグが必要です。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:63:57: PropertyException のクラス情報が取得できません。
+/home/dk/github_workspace/Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java:66: Line has trailing spaces.
 Audit done.

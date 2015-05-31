@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - Encode.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../../../coverage.css'/>
+  <script type='text/javascript' src='../../../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>Messenger/src/main/java/jp/co/dk/messenger/mail/Encode.java</caption>
+    <tr>
+      <td class='line'>1</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l1s0'>package jp.co.dk.messenger.mail;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import jp.co.dk.messenger.exception.MessengerInitializeException;
+import jp.co.dk.messenger.messege.MessengerMessege;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * &lt;p>メール送信にて使用するエンコードを定義する定数クラス&lt;/p>
+ * 
+ * @author dk
+ * @version 1.0
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public enum Encode {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** ISO-2022-JP */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	ISO_2022_JP("ISO-2022-JP"),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** UTF-8 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	UTF_8("UTF-8"),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>20</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** Shift_Jis */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	SHIFT_JIS("Shift_Jis"),</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>23</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>25</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 文字コードを表す文字列 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private String encodeStr;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * &lt;p>コンストラクタ&lt;/p>
+	 * 文字コードを表す文字列を元にエンコードのインスタンスを生成します。
+	 * 
+	 * @param encodeStr 文字コードを表す文字列
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>34</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l34s0'>	private Encode(String encodeStr) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l35s0'>		this.encodeStr = encodeStr;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l36s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * 文字コードを表す文字列を返却する。
+	 * 
+	 * @return 文字コードを表す文字列
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	String getEncodeStr() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l44s0'>		return this.encodeStr;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * &lt;p>指定の文字列を元に該当するエンコードのインスタンスを返却する。&lt;/p>
+	 * 合致するエンコードのインスタンスが見つからなかった場合、MessengerInitializeExceptionを送出する。
+	 * 
+	 * @param encode 文字コードを表す文字列
+	 * @return エンコードのインスタンス
+	 * @throws MessengerInitializeException 合致するエンコードのインスタンスが見つからなかった場合
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	static Encode getEncode(String encode) throws MessengerInitializeException{</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/2</span>
+        <span class='uncovered' onclick="showPath(this,'l56s0 l57s0 l57s1')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l56s0 l57s0 l56s1 l59s0')">B: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l56s0'>		for (Encode encodeObj : Encode.values()) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>			<span id='l57s0' title='Executions: 2' class='covered'>if (encodeObj.encodeStr.equals(encode)) return encodeObj;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l59s0'>		throw new MessengerInitializeException(MessengerMessege.ERROR_SEND_MAIL_ENCODING_IS_FAILE, encode);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

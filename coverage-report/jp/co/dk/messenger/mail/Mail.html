@@ -9,98 +9,460 @@
 </head>
 <body onload='prettyPrint()'>
   <table cellpadding='0' cellspacing='1'>
-    <caption>Messenger/src/jp/co/dk/messenger/mail/Mail.java</caption>
+    <caption>Messenger/src/main/java/jp/co/dk/messenger/mail/Mail.java</caption>
     <tr>
-      <td class='line'>1</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>package jp.co.dk.messenger.mail;</pre></td>
+      <td class='line'>1</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l1s0'>package jp.co.dk.messenger.mail;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
       <td class='line'></td><td>&nbsp;</td>
-      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import javax.mail.Session;
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
-import jp.co.dk.messenger.Messege;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 import jp.co.dk.messenger.Messenger;
 import jp.co.dk.messenger.exception.MessengerInitializeException;
+import jp.co.dk.messenger.exception.MessengerSendException;
 import jp.co.dk.messenger.messege.MessengerMessege;
+import jp.co.dk.messenger.property.MessengerProperty;
 </div><span>import ...</span></pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>10</td><td>&nbsp;</td>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * &lt;p>メールの送信を行うメッセンジャークラスです。&lt;/p>
+ * MessengerProperty.propertiesに定義されている内容を元に本クラスのインスタンスを生成し、メール送信を行います。
+ * 
+ * @version 1.0
+ * @author D.Kanno
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>public class Mail implements Messenger{</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>12</td><td>&nbsp;</td>
-      <td><pre class='comment'>	/** SMTPサーバ名 */</pre></td>
+      <td class='line'>34</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続先ホスト名 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>13</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected String <span class='instance uncovered' title='Reads: 0 Writes: 1'>smtpServerName</span>;</pre></td>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 2 Writes: 1'>hostname</span>;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>15</td><td>&nbsp;</td>
-      <td><pre class='comment'>	/** SMTPホスト名 */</pre></td>
+      <td class='line'>37</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続先ポート番号 */</pre></td>
     </tr>
     <tr>
-      <td class='line'>16</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	protected String <span class='instance uncovered' title='Reads: 0 Writes: 1'>smtpHostName</span>;</pre></td>
+      <td class='line'>38</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected int <span class='instance uncovered' title='Reads: 0 Writes: 1'>port</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>40</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続先認証有無 */</pre></td>
     </tr>
     <tr>
-      <td></td><td class='count'>7</td>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected boolean <span class='instance covered' title='Reads: 1 Writes: 1'>auth</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>43</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続時のSTARTTLS */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected boolean <span class='instance uncovered' title='Reads: 0 Writes: 1'>starttls_enable</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>46</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続時のデバック有無 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected boolean <span class='instance uncovered' title='Reads: 0 Writes: 1'>debug</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>49</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続時のユーザ */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 2 Writes: 1'>user</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>52</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続時のパスワード */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected String <span class='instance covered' title='Reads: 2 Writes: 1'>password</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** メール送信セッション */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Session <span class='instance uncovered' title='Reads: 0 Writes: 1'>session</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 送信先一覧 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Map&lt;Message.RecipientType, List&lt;Address>> <span class='instance covered' title='Reads: 3 Writes: 1'>toAddressList</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>61</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** FROMヘッダ内容 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Address <span class='instance uncovered' title='Reads: 0 Writes: 1'>fromAddress</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>64</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** 送信時のエンコード */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>65</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Encode <span class='instance uncovered' title='Reads: 0 Writes: 1'>encode</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * &lt;p>MessengerProperty.propertiesに定義されている内容を元にインスタンスを生成します。&lt;/p>
+	 */    <tr>
+      <td></td><td class='count'>1</td>
       <td class='paths'>
-        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 5/5</span>
-        <span class='covered' onclick="showPath(this,'l18s0 l19s0 l19s2')">A: 2</span>
-        <span class='covered' onclick="showPath(this,'l18s0 l19s0 l19s1 l19s2')">B: 2</span>
-        <span class='covered' onclick="showPath(this,'l18s0 l19s0 l19s1 l20s0 l20s2')">C: 1</span>
-        <span class='covered' onclick="showPath(this,'l18s0 l19s0 l19s1 l20s0 l20s1 l20s2')">D: 1</span>
-        <span class='covered' onclick="showPath(this,'l18s0 l19s0 l19s1 l20s0 l20s1 l21s0 l23s0')">E: 1</span>
+        <span style='cursor:default; background-color:#e51a00' onclick='hidePath()'>Path coverage: 1/10</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s2')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l72s2')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l85s0 l86s0 l86s1 l86s2')">C: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l85s0 l86s0 l88s0 l89s0 l89s1 l89s2')">D: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l85s0 l86s0 l86s1 l88s0 l89s0 l89s1 l89s2')">E: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l97s0 l99s0 l105s0')">F: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l85s0 l86s0 l88s0 l89s0 l91s0 l99s0 l105s0')">G: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l85s0 l86s0 l88s0 l89s0 l89s1 l91s0 l99s0 l105s0')">H: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l85s0 l86s0 l86s1 l88s0 l89s0 l91s0 l99s0 l105s0')">I: 0</span>
+        <span class='covered' onclick="showPath(this,'l70s0 l72s0 l72s1 l73s0 l84s0 l85s0 l86s0 l86s1 l88s0 l89s0 l89s1 l91s0 l99s0 l105s0')">J: 1</span>
       </td>
     </tr>
+</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>70</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l70s0'>	public Mail() throws MessengerInitializeException {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l71s0'>		this.hostname        = MessengerProperty.MAIL_SMTP_HOST.getString();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>		<span id='l72s0' title='Executions: 1' class='covered'>if (hostname        == null</span> || <span id='l72s1' title='Executions: 1' class='covered'>hostname.length() == 0) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_HOSTNAME_IS_NOT_SET);</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>73</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l73s0'>		this.port            = MessengerProperty.MAIL_SMTP_PORT.getInt();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>74</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l74s0'>		this.auth            = MessengerProperty.MAIL_SMTP_AUTH.getBoolean();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>75</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l75s0'>		this.starttls_enable = MessengerProperty.MAIL_SMTP_STARTTLS_ENABLE.getBoolean();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>76</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l76s0'>		this.debug           = MessengerProperty.MAIL_SMTP_DEBUG.getBoolean();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>77</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l77s0'>		Properties property = new Properties();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>78</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l78s0'>		property.put("mail.smtp.host"           , MessengerProperty.MAIL_SMTP_HOST.getString());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>79</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l79s0'>		property.put("mail.smtp.port"           , MessengerProperty.MAIL_SMTP_PORT.getString());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>80</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l80s0'>		property.put("mail.smtp.auth"           , MessengerProperty.MAIL_SMTP_AUTH.getString());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>81</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l81s0'>		property.put("mail.smtp.starttls.enable", MessengerProperty.MAIL_SMTP_STARTTLS_ENABLE.getString());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>82</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l82s0'>		property.put("mail.smtp.debug"          , MessengerProperty.MAIL_SMTP_DEBUG.getString());</pre></td>
+    </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>18</td><td class='count'>7</td>
-      <td><pre class='prettyprint covered' id='l18s0'>	public Mail(String smtpServerName, String smtpHostName) throws MessengerInitializeException {</pre></td>
+      <td class='line'>84</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>		<span id='l84s0' title='Executions: 1' class='covered'>if (auth)</span> <span id='l84s1' title='Executions: 1' class='covered'>{</span></pre></td>
     </tr>
     <tr>
-      <td class='line'>19</td><td class='count'>7</td>
-      <td><pre class='prettyprint jmp'>		<span id='l19s0' title='Executions: 7' class='covered'>if (smtpServerName == null</span> || <span id='l19s1' title='Executions: 5' class='covered'>smtpServerName.equals("")) throw new MessengerInitializeException(MessengerMessege.ERROR_SERVERNAME_IS_NOT_SET);</span></pre></td>
+      <td class='line'>85</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l85s0'>			this.user     = MessengerProperty.MAIL_SMTP_AUTHENTICATION_USER.getString();</pre></td>
     </tr>
     <tr>
-      <td class='line'>20</td><td class='count'>3</td>
-      <td><pre class='prettyprint jmp'>		<span id='l20s0' title='Executions: 3' class='covered'>if (smtpHostName   == null</span> || <span id='l20s1' title='Executions: 2' class='covered'>smtpHostName.equals(""))   throw new MessengerInitializeException(MessengerMessege.ERROR_HOSTNAME_IS_NOT_SET);</span></pre></td>
-    </tr>
-    <tr>
-      <td class='line'>21</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l21s0'>		this.smtpServerName = smtpServerName;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>22</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l22s0'>		this.smtpHostName   = smtpHostName;</pre></td>
-    </tr>
-    <tr>
-      <td class='line'>23</td><td class='count'>1</td>
-      <td><pre class='prettyprint covered' id='l23s0'>	}</pre></td>
+      <td class='line'>86</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>			<span id='l86s0' title='Executions: 1' class='covered'>if (user != null</span> && <span id='l86s1' title='Executions: 1' class='covered'>user.equals("")) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_USER_IS_NOT_SET);</span></pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>25</td><td>&nbsp;</td>
+      <td class='line'>88</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l88s0'>			this.password = MessengerProperty.MAIL_SMTP_AUTHENTICATION_PASSWORD.getString();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>89</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>			<span id='l89s0' title='Executions: 1' class='covered'>if (password != null</span> && <span id='l89s1' title='Executions: 1' class='covered'>password.equals("")) throw new MessengerInitializeException(MessengerMessege.ERROR_SMTP_PASSWORD_IS_NOT_SET);</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>91</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l91s0'>			this.session = Session.getInstance(property, new javax.mail.Authenticator(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>92</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>				protected PasswordAuthentication getPasswordAuthentication(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>93</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l93s0'>	            	return new PasswordAuthentication(user, password);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>94</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>				}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>95</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>			});</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>96</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l96s0'>		} else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>97</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l97s0'>			this.session = Session.getInstance(property);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>98</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>99</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l99s0'>		this.toAddressList = new HashMap&lt;Message.RecipientType, List&lt;Address>>();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>100</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l100s0'>		this.toAddressList.put(Message.RecipientType.TO , this.createAddressList(MessengerProperty.MAIL_SMTP_TO_MAIL_ADDRESS.getList()));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>101</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l101s0'>		this.toAddressList.put(Message.RecipientType.CC , this.createAddressList(MessengerProperty.MAIL_SMTP_CC_MAIL_ADDRESS.getList()));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>102</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l102s0'>		this.toAddressList.put(Message.RecipientType.BCC, this.createAddressList(MessengerProperty.MAIL_SMTP_BCC_MAIL_ADDRESS.getList()));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>103</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l103s0'>		this.fromAddress   = this.createAddress(MessengerProperty.MAIL_SMTP_FROM_MAIL_ADDRESS.getString());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>104</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l104s0'>		this.encode        = Encode.getEncode(MessengerProperty.MAIL_SMTP_ENCODING.getString());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>105</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l105s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>107</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>	@Override</pre></td>
     </tr>
     <tr>
-      <td class='line'>26</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public void send(Messege message) {</pre></td>
+      <td class='line'>108</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void send(jp.co.dk.messenger.Message message) throws MessengerSendException{</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>109</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		try {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/8</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l113s0 l114s0 l115s0 l116s0 l117s0 l124s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l113s0 l114s0 l115s0 l116s0 l116s1 l117s0 l124s0')">B: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l113s0 l114s0 l114s1 l115s0 l116s0 l117s0 l124s0')">C: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l113s0 l114s0 l114s1 l115s0 l116s0 l116s1 l117s0 l124s0')">D: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l112s1 l113s0 l114s0 l115s0 l116s0 l117s0 l124s0')">E: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l112s1 l113s0 l114s0 l115s0 l116s0 l116s1 l117s0 l124s0')">F: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l112s1 l113s0 l114s0 l114s1 l115s0 l116s0 l117s0 l124s0')">G: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l110s0 l112s0 l112s1 l113s0 l114s0 l114s1 l115s0 l116s0 l116s1 l117s0 l124s0')">H: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>110</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l110s0'>			MimeMessage messageObject = new MimeMessage(this.session);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>111</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l111s0'>			List&lt;Address> toAddressList  = this.toAddressList.get(Message.RecipientType.TO);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>112</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>			<span id='l112s0' title='Executions: 0' class='uncovered'>if (toAddressList != null)</span>  <span id='l112s1' title='Executions: 0' class='uncovered'>messageObject.setRecipients(Message.RecipientType.TO, toAddressList.toArray(new Address[0]));</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>113</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l113s0'>			List&lt;Address> ccAddressList  = this.toAddressList.get(Message.RecipientType.CC);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>114</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>			<span id='l114s0' title='Executions: 0' class='uncovered'>if (ccAddressList != null)</span>  <span id='l114s1' title='Executions: 0' class='uncovered'>messageObject.setRecipients(Message.RecipientType.CC, ccAddressList.toArray(new Address[0]));</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>115</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l115s0'>			List&lt;Address> bccAddressList = this.toAddressList.get(Message.RecipientType.BCC);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>116</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>			<span id='l116s0' title='Executions: 0' class='uncovered'>if (bccAddressList != null)</span> <span id='l116s1' title='Executions: 0' class='uncovered'>messageObject.setRecipients(Message.RecipientType.BCC, bccAddressList.toArray(new Address[0]));</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>117</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l117s0'>			messageObject.setFrom(this.fromAddress);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>118</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l118s0'>			messageObject.setSubject(message.getTitle(), this.encode.getEncodeStr());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>119</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l119s0'>			messageObject.setText(message.getText(), this.encode.getEncodeStr());</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>120</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l120s0'>			Transport.send(messageObject);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>121</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l121s0'>		} catch (MessagingException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>122</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l122s0'>			throw new MessengerSendException(MessengerMessege.ERROR_SEND_MAIL, e);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>123</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>124</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l124s0'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>28</td><td class='count'>0</td>
-      <td><pre class='prettyprint uncovered' id='l28s0'>	}</pre></td>
+      <td class='line'>126</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected List&lt;Address> createAddressList(List&lt;String> addressList) throws MessengerInitializeException {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>127</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l127s0'>		List&lt;Address> addressObjList = new ArrayList&lt;Address>();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>128</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l128s0'>		for (String addressStr : addressList) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>129</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l129s0'>			addressObjList.add(this.createAddress(addressStr));</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>130</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>131</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered' id='l131s0'>		return addressObjList;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>132</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>30</td><td>&nbsp;</td>
+      <td class='line'>134</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected Address createAddress(String addressStr) throws MessengerInitializeException {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>135</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		try {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>136</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l136s0'>			String[] splitedAddress = addressStr.split(":");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>137</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l137s0'>			return new InternetAddress(splitedAddress[0], splitedAddress[1]);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>138</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l138s0'>		} catch (UnsupportedEncodingException e) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>139</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l139s0'>			throw new MessengerInitializeException(MessengerMessege.ERROR_SEND_MAILADDRESS_IS_FAILE);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>140</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>141</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>142</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>

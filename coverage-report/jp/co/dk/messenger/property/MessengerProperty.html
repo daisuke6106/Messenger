@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - MessengerProperty.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../../../../coverage.css'/>
+  <script type='text/javascript' src='../../../../../coverage.js'></script>
+  <script type='text/javascript' src='../../../../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>Messenger/src/main/java/jp/co/dk/messenger/property/MessengerProperty.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package jp.co.dk.messenger.property;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.io.File;
+
+import jp.co.dk.property.AbstractProperty;
+import jp.co.dk.property.exception.PropertyException;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * メッセンジャーに関するプロパティを定義するクラスです。
+ * 
+ * @version 1.0
+ * @author D.Kanno
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class MessengerProperty extends AbstractProperty {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='comment'>	// [メッセンジャー全般]=============================================================================================</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l17s0'>	public static final MessengerProperty MESSENGER_CLASS                   = new MessengerProperty("messenger.class");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='comment'>	// [メール関連]====================================================================================================</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続先ホスト名 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l21s0'>	public static final MessengerProperty MAIL_SMTP_HOST                    = new MessengerProperty("mail.smtp.host");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>23</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続先ポート番号 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l24s0'>	public static final MessengerProperty MAIL_SMTP_PORT                    = new MessengerProperty("mail.smtp.port");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>26</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続先認証有無 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l27s0'>	public static final MessengerProperty MAIL_SMTP_AUTH                    = new MessengerProperty("mail.smtp.auth");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続時のSTARTTLS */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l30s0'>	public static final MessengerProperty MAIL_SMTP_STARTTLS_ENABLE         = new MessengerProperty("mail.smtp.starttls.enable");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>32</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP接続時のデバック有無 */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>33</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l33s0'>	public static final MessengerProperty MAIL_SMTP_DEBUG                   = new MessengerProperty("mail.smtp.debug");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP認証ユーザ */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l36s0'>	public static final MessengerProperty MAIL_SMTP_AUTHENTICATION_USER     = new MessengerProperty("mail.smtp.authentication.user");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>38</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** SMTP認証パスワード */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l39s0'>	public static final MessengerProperty MAIL_SMTP_AUTHENTICATION_PASSWORD = new MessengerProperty("mail.smtp.authentication.password");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** メール送信元アドレス */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l42s0'>	public static final MessengerProperty MAIL_SMTP_FROM_MAIL_ADDRESS       = new MessengerProperty("mail.smtp.from.mail.address");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** メール送信元アドレス（TO） */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l45s0'>	public static final MessengerProperty MAIL_SMTP_TO_MAIL_ADDRESS         = new MessengerProperty("mail.smtp.to.mail.address");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>47</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** メール送信元アドレス（CC） */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>48</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l48s0'>	public static final MessengerProperty MAIL_SMTP_CC_MAIL_ADDRESS         = new MessengerProperty("mail.smtp.cc.mail.address");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** メール送信元アドレス（BCC） */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l51s0'>	public static final MessengerProperty MAIL_SMTP_BCC_MAIL_ADDRESS        = new MessengerProperty("mail.smtp.bcc.mail.address");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>53</td><td>&nbsp;</td>
+      <td><pre class='comment'>	/** メール送信時エンコーディング */</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l54s0'>	public static final MessengerProperty MAIL_SMTP_ENCODING                = new MessengerProperty("mail.smtp.encoding");</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * コンストラクタ&lt;p>
+	 * 
+	 * 指定されたプロパティキーをもとにプロパティ定数クラスを生成します。
+	 * 
+	 * @param key プロパティキー
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	protected MessengerProperty (String key) throws PropertyException {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>64</td><td class='count'>13</td>
+      <td><pre class='prettyprint covered' id='l64s0'>		super(new File("MessengerProperty.properties"), key);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>65</td><td class='count'>13</td>
+      <td><pre class='prettyprint covered' id='l65s0'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>67</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

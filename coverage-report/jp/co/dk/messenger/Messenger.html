@@ -9,24 +9,51 @@
 </head>
 <body onload='prettyPrint()'>
   <table cellpadding='0' cellspacing='1'>
-    <caption>Messenger/src/jp/co/dk/messenger/Messenger.java</caption>
+    <caption>Messenger/src/main/java/jp/co/dk/messenger/Messenger.java</caption>
     <tr>
       <td class='line'>1</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>package jp.co.dk.messenger;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>3</td><td>&nbsp;</td>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import jp.co.dk.messenger.exception.MessengerSendException;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * &lt;p>メッセージ送信を行うクラスが実装するインターフェースです。&lt;/p>
+ * メール、IPメッセンジャーなど、メッセージの送信を実際に行うクラスが実装するべきインターフェースです。&lt;br/>
+ * sendメソッドに対してメッセージ本文のインスタンスを渡すことで、メッセージの送信を実際に行います。
+ * 
+ * @version 1.0
+ * @author D.Kanno
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>public interface Messenger {</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>5</td><td>&nbsp;</td>
-      <td><pre class='prettyprint'>	public void send(Messege message);</pre></td>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>	/**
+	 * &lt;p>メッセージ送信を行います。&lt;/p>
+	 * 引数にメッセージタイトル、本文を渡すことによって、実際にメッセージの送信を行います。
+	 * 
+	 * @param message　メッセージタイトル、本文を保持するメッセージ送信内諭インスタンス
+	 * @throws MessengerSendException メッセージの送信に失敗した場合
+	 */</div><span>	/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void send(Message message) throws MessengerSendException;</pre></td>
     </tr>
     <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
     <tr>
-      <td class='line'>7</td><td>&nbsp;</td>
+      <td class='line'>24</td><td>&nbsp;</td>
       <td><pre class='prettyprint'>}</pre></td>
     </tr>
   </table>
